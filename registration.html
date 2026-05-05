@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка на сотрудничество — СЗЛК Производство</title>
+  <meta name="description" content="Оставьте заявку: подбор запчастей, поставка оборудования, партнерство. Свяжемся в течение рабочего дня.">
+  <link rel="icon" type="image/svg+xml" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="СЗЛК Производство" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-title">СЗЛК</span>
+        <span class="logo-sub">Производство</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <ul><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="catalog.html" class="nav-link">Каталог</a></li><li><a href="services.html" class="nav-link">Услуги</a></li><li><a href="about.html" class="nav-link">О компании</a></li><li><a href="clients.html" class="nav-link">Клиенты</a></li><li><a href="contacts.html" class="nav-link">Контакты</a></li><li><a href="registration.html" class="nav-link active">Заявка</a></li></ul>
+    </nav>
+    <a class="header-email" href="mailto:proizvodstvo@s-zlk.ru">
+      <i class="fa-solid fa-envelope"></i>
+      <span>proizvodstvo@s-zlk.ru</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Меню">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="catalog.html" class="nav-link">Каталог</a></li><li><a href="services.html" class="nav-link">Услуги</a></li><li><a href="about.html" class="nav-link">О компании</a></li><li><a href="clients.html" class="nav-link">Клиенты</a></li><li><a href="contacts.html" class="nav-link">Контакты</a></li><li><a href="registration.html" class="nav-link active">Заявка</a></li></ul>
+    <a class="mobile-email" href="mailto:proizvodstvo@s-zlk.ru">
+      <i class="fa-solid fa-envelope"></i> proizvodstvo@s-zlk.ru
+    </a>
+  </div>
+</header>
+<main>
+
+<nav class="breadcrumbs"><div class="container"><ol><li><a href="index.html">Главная</a></li><li class="sep">/</li><li class="current">Заявка</li></ol></div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Оставить заявку</h1>
+    <p>Заполните форму — менеджер свяжется с вами в течение рабочего дня.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="reg-grid">
+      <div class="card">
+        <h2>Заявка для обратной связи</h2>
+        <div id="formAlertSuccess" class="alert alert-success" hidden>
+          <i class="fa-solid fa-circle-check"></i>
+          <div><strong>Заявка отправлена!</strong><br>Мы свяжемся с вами в ближайшее время.</div>
+        </div>
+        <div id="formAlertError" class="alert alert-error" hidden>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="formAlertErrorText">Не удалось отправить заявку. Попробуйте позже.</span>
+        </div>
+
+        <form id="regForm" class="reg-form" novalidate>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+
+          <fieldset>
+            <legend>Тип заявки <span class="req">*</span></legend>
+            <div class="radio-grid">
+              <label class="radio-card">
+                <input type="radio" name="registrationType" value="client">
+                <i class="fa-solid fa-building"></i>
+                <span><strong>Клиент</strong><br><small>Хочу заказать запасные части или оборудование</small></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="registrationType" value="supplier">
+                <i class="fa-solid fa-truck"></i>
+                <span><strong>Поставщик</strong><br><small>Готов предложить продукцию для поставки</small></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="registrationType" value="partner">
+                <i class="fa-solid fa-handshake"></i>
+                <span><strong>Партнер</strong><br><small>Хочу обсудить долгосрочное сотрудничество</small></span>
+              </label>
+            </div>
+            <p class="error-msg" data-error="registrationType"></p>
+          </fieldset>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="contactPerson">Контактное лицо <span class="req">*</span></label>
+              <input id="contactPerson" name="contactPerson" type="text" autocomplete="name" maxlength="200">
+              <p class="error-msg" data-error="contactPerson"></p>
+            </div>
+            <div class="field">
+              <label for="company">Организация</label>
+              <input id="company" name="company" type="text" autocomplete="organization" maxlength="200">
+            </div>
+            <div class="field">
+              <label for="phone">Телефон <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              <p class="error-msg" data-error="phone"></p>
+            </div>
+            <div class="field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="200">
+              <p class="error-msg" data-error="email"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Дополнительная информация</label>
+            <textarea id="message" name="message" rows="4" maxlength="4000" placeholder="Опишите цели сотрудничества или задайте вопросы"></textarea>
+          </div>
+
+          <div class="field">
+            <label class="check-row">
+              <input type="checkbox" name="agreement">
+              <span>Я согласен(на) на обработку персональных данных в соответствии с <a href="#" id="privacyPolicyLink">политикой конфиденциальности</a> <span class="req">*</span></span>
+            </label>
+            <p class="error-msg" data-error="agreement"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary block" id="regSubmitBtn">
+            <i class="fa-solid fa-paper-plane"></i> Отправить заявку
+          </button>
+        </form>
+      </div>
+
+      <aside class="reg-aside">
+        <div class="card">
+          <h3>Контакты</h3>
+          <ul class="aside-list">
+            <li><a href="tel:+73463205383"><strong>+7 (3463) 20-53-83</strong></a></li>
+            <li><a href="mailto:proizvodstvo@s-zlk.ru">proizvodstvo@s-zlk.ru</a></li>
+            <li class="muted">г. Нефтеюганск, ул. Мира, стр. 8/1</li>
+            <li class="muted">Пн–Пт: 9:00 – 18:00</li>
+          </ul>
+        </div>
+        <div class="card primary-tint">
+          <h3 class="accent">Как мы работаем</h3>
+          <ol class="steps-list">
+            <li><span class="step-num">1.</span> Принимаем и анализируем заявку</li>
+            <li><span class="step-num">2.</span> Подбираем позиции и согласовываем характеристики</li>
+            <li><span class="step-num">3.</span> Готовим коммерческое предложение</li>
+            <li><span class="step-num">4.</span> Организуем поставку «под ключ»</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>ООО «СЗЛК Производство»</h3>
+        <p>Профессиональная поставка запасных частей и логистика для нефтегазового оборудования с 2016 года.</p>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul class="footer-contacts">
+          <li><i class="fa-solid fa-location-dot"></i> г. Нефтеюганск, ул. Мира, стр. 8/1</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+73463205383">+7 (3463) 20-53-83</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:proizvodstvo@s-zlk.ru">proizvodstvo@s-zlk.ru</a></li>
+          <li><i class="fa-solid fa-clock"></i> Пн–Пт: 9:00 – 18:00</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <ul class="footer-nav"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="services.html">Услуги</a></li><li><a href="about.html">О компании</a></li><li><a href="clients.html">Клиенты</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="registration.html">Заявка</a></li></ul>
+      </div>
+      <div>
+        <h3>Реквизиты</h3>
+        <ul class="footer-req">
+          <li>ОГРН: <span>1167847419618</span></li>
+          <li>ИНН: <span>7804581196</span></li>
+          <li>КПП: <span>860801001</span></li>
+          <li>Директор: <span>Хазов Дмитрий Васильевич</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2016–2026 ООО «СЗЛК Производство». Все права защищены.</p>
+      <p>Сайт носит информационный характер и не является публичной офертой.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+    (function() {
+        const policyLink = document.getElementById('privacyPolicyLink');
+        if (policyLink) {
+            policyLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(
+                    'Политика конфиденциальности\n\n' +
+                    '1. Сбор персональных данных\n' +
+                    '   Мы собираем только те данные, которые вы добровольно предоставляете через форму заявки: имя, телефон, e-mail, название организации и текст сообщения.\n\n' +
+                    '2. Использование данных\n' +
+                    '   Ваши данные используются исключительно для обработки заявки и связи с вами. Мы не передаём информацию третьим лицам без вашего согласия.\n\n' +
+                    '3. Хранение данных\n' +
+                    '   Данные хранятся в зашифрованном виде и защищены в соответствии с Федеральным законом №152-ФЗ «О персональных данных».\n\n' +
+                    '4. Ваши права\n' +
+                    '   Вы можете запросить удаление своих данных, написав нам на e-mail: proizvodstvo@s-zlk.ru.\n\n' +
+                    '5. Согласие\n' +
+                    '   Отправляя заявку, вы подтверждаете, что ознакомлены с настоящей политикой и согласны с её условиями.'
+                );
+            });
+        }
+    })();
+</script>
+</body>
+</html>

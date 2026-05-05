@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клиенты и поставщики — СЗЛК Производство</title>
+  <meta name="description" content="Среди клиентов и поставщиков СЗЛК Производство — крупнейшие компании нефтегазовой отрасли России и мира.">
+  <link rel="icon" type="image/svg+xml" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Дополнительные стили для страницы клиентов */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .partner-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+    }
+    
+    .partner-logo {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+    
+    .partner-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.75rem;
+    }
+    
+    @media (max-width: 992px) {
+      .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="СЗЛК Производство" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-title">СЗЛК</span>
+        <span class="logo-sub">Производство</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <ul><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="catalog.html" class="nav-link">Каталог</a></li><li><a href="services.html" class="nav-link">Услуги</a></li><li><a href="about.html" class="nav-link">О компании</a></li><li><a href="clients.html" class="nav-link active">Клиенты</a></li><li><a href="contacts.html" class="nav-link">Контакты</a></li><li><a href="registration.html" class="nav-link">Заявка</a></li></ul>
+    </nav>
+    <a class="header-email" href="mailto:proizvodstvo@s-zlk.ru">
+      <i class="fa-solid fa-envelope"></i>
+      <span>proizvodstvo@s-zlk.ru</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Меню">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="catalog.html" class="nav-link">Каталог</a></li><li><a href="services.html" class="nav-link">Услуги</a></li><li><a href="about.html" class="nav-link">О компании</a></li><li><a href="clients.html" class="nav-link active">Клиенты</a></li><li><a href="contacts.html" class="nav-link">Контакты</a></li><li><a href="registration.html" class="nav-link">Заявка</a></li></ul>
+    <a class="mobile-email" href="mailto:proizvodstvo@s-zlk.ru">
+      <i class="fa-solid fa-envelope"></i> proizvodstvo@s-zlk.ru
+    </a>
+  </div>
+</header>
+<main>
+
+<nav class="breadcrumbs"><div class="container"><ol><li><a href="index.html">Главная</a></li><li class="sep">/</li><li class="current">Клиенты</li></ol></div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Клиенты и <span class="accent">поставщики</span></h1>
+    <p>Работаем с крупнейшими предприятиями нефтегазового и энергетического комплекса России и мира.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <i class="fa-solid fa-handshake accent"></i>
+      <h2>Ключевые партнеры</h2>
+    </div>
+    <div class="partners-grid">
+      
+      <!-- 1) Технологии ОФС -->
+      <div class="partner-card">
+        <img src="images/logo.company/ofs.webp" alt="Технологии ОФС" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Технологии ОФС</div>
+      </div>
+      
+      <!-- 2) Ньютех Велл Сервис -->
+      <div class="partner-card">
+        <img src="images/logo.company/ntws.webp" alt="Ньютех Велл Сервис" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Ньютех Велл Сервис</div>
+      </div>
+      
+      <!-- 3) Подразделения РОСНЕФТИ -->
+      <div class="partner-card">
+        <img src="images/logo.company/rosneft.webp" alt="РОСНЕФТЬ" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Подразделения РОСНЕФТИ</div>
+      </div>
+      
+      <!-- 4) Сибирская Сервисная Компания -->
+      <div class="partner-card">
+        <img src="images/logo.company/ssk.webp" alt="Сибирская Сервисная Компания" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Сибирская Сервисная Компания</div>
+      </div>
+      
+      <!-- 5) Завод Нефтяного Оборудования -->
+      <div class="partner-card">
+        <img src="images/logo.company/zno.webp" alt="Завод Нефтяного Оборудования" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Завод Нефтяного Оборудования</div>
+      </div>
+      
+      <!-- 6) Schlumberger Подразделения -->
+      <div class="partner-card">
+        <img src="images/logo.company/slb.webp" alt="Schlumberger" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Schlumberger Подразделения</div>
+      </div>
+      
+      <!-- 7) Норд-Сервис -->
+      <div class="partner-card">
+        <img src="images/logo.company/nord.webp" alt="Норд-Сервис" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Норд-Сервис</div>
+      </div>
+      
+      <!-- 8) Центр цементирования скважин -->
+      <div class="partner-card">
+        <img src="images/logo.company/centr-cement.webp" alt="Центр цементирования скважин" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">Центр цементирования скважин</div>
+      </div>
+      
+      <!-- 9) Рус-КР -->
+      <div class="partner-card">
+        <img src="images/logo.company/snph.webp" alt="Рус-КР" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">АО «Самотлорнефтепромхим»</div>
+      </div>
+      
+      <!-- 10) УралТехноИмпэкс -->
+      <div class="partner-card">
+        <img src="images/logo.company/uraltehno.webp" alt="УралТехноИмпэкс" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">УралТехноИмпэкс</div>
+      </div>
+      
+      <!-- 11) ООО Свет Энергия -->
+      <div class="partner-card">
+        <img src="images/logo.company/svet-energy.webp" alt="Свет Энергия" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">ООО «Свет Энергия»</div>
+      </div>
+      
+      <!-- 12) ООО Интегра Сервисы -->
+      <div class="partner-card">
+        <img src="images/logo.company/integra.webp" alt="Интегра Сервисы" class="partner-logo" onerror="this.src='images/logo.company/placeholder.webp'">
+        <div class="partner-name">ООО «Интегра Сервисы»</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <i class="fa-solid fa-award accent"></i>
+      <h2>Что говорят о нас</h2>
+    </div>
+    <div class="cards-3">
+      
+      <!-- Отзыв от Технологии ОФС -->
+      <figure class="card testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <blockquote>«Сотрудничаем с СЗЛК Производство уже более года. Поставляют качественные запасные части для нашего насосного оборудования. Все заказы выполняются в срок, документация в порядке. Оперативное решение вопросов — отдельная благодарность. Планируем расширять сотрудничество.»</blockquote>
+        <figcaption>
+          <div class="t-name">Руководитель отдела снабжения</div>
+          <div class="t-company">Технологии ОФС</div>
+        </figcaption>
+      </figure>
+      
+      <!-- Отзыв от УралТехноИмпэкс -->
+      <figure class="card testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <blockquote>«Надёжный поставщик запчастей для нефтегазового оборудования. Удобная логистика, консолидация грузов и полный пакет документов. СЗЛК Производство помогает нам быстро закрывать потребности в комплектующих для гидроразрыва пласта. Работаем уже третий год, нареканий нет.»</blockquote>
+        <figcaption>
+          <div class="t-name">Директор по закупкам</div>
+          <div class="t-company">УралТехноИмпэкс</div>
+        </figcaption>
+      </figure>
+      
+      <!-- Отзыв от Интегра Сервисы -->
+      <figure class="card testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <blockquote>«Ценим профессионализм команды СЗЛК Производство. Всегда помогают с подбором аналогов, если оригинальные позиции недоступны. Отгрузки чёткие, менеджеры на связи 24/7. Ответственный подход к выполнению договорённостей — то, что нужно для нашего бизнеса.»</blockquote>
+        <figcaption>
+          <div class="t-name">Начальник отдела материально-технического обеспечения</div>
+          <div class="t-company">ООО Интегра Сервисы</div>
+        </figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container center">
+    <h2>Станьте нашим <span class="accent">клиентом</span> или <span class="accent">поставщиком</span></h2>
+    <p>Присоединяйтесь к числу наших партнеров и получите профессиональное сопровождение ваших тендеров и заявок.</p>
+    <a href="registration.html" class="btn btn-primary" style="margin-top:1rem;">Оставить заявку <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>ООО «СЗЛК Производство»</h3>
+        <p>Профессиональная поставка запасных частей и логистика для нефтегазового оборудования с 2016 года.</p>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul class="footer-contacts">
+          <li><i class="fa-solid fa-location-dot"></i> г. Нефтеюганск, ул. Мира, стр. 8/1</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+73463205383">+7 (3463) 20-53-83</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:proizvodstvo@s-zlk.ru">proizvodstvo@s-zlk.ru</a></li>
+          <li><i class="fa-solid fa-clock"></i> Пн–Пт: 9:00 – 18:00</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <ul class="footer-nav"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="services.html">Услуги</a></li><li><a href="about.html">О компании</a></li><li><a href="clients.html">Клиенты</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="registration.html">Заявка</a></li></ul>
+      </div>
+      <div>
+        <h3>Реквизиты</h3>
+        <ul class="footer-req">
+          <li>ОГРН: <span>1167847419618</span></li>
+          <li>ИНН: <span>7804581196</span></li>
+          <li>КПП: <span>860801001</span></li>
+          <li>Директор: <span>Хазов Дмитрий Васильевич</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2016–2026 ООО «СЗЛК Производство». Все права защищены.</p>
+      <p>Сайт носит информационный характер и не является публичной офертой.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
